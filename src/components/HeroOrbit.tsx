@@ -12,7 +12,7 @@ export const HeroOrbit = ({
                     height: `${size}px`,
                     width: `${size}px`,
         }} >
-              <div className="inline-flex animate-pulse" style={{
+              <div className="inline-flex" style={{
             transform: `rotate(${rotation * -1}deg)`
         }}>{children}</div>
       </div>
