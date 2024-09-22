@@ -1,10 +1,11 @@
-import ArrowupRightIcon from '@/assets/icons/arrow-up-right.svg';
+import ArrowupRightIcon from '@/assets/icons/arrow-up-right.svg'; // Ensure the path and import is correct
 
 const footerLinks = [
-  { title: "Youtube", href: "#" },
-  { title: "Twitter", href: "#" },
-  { title: "Instagram", href: "#" },
-  { title: "LinkedIn", href: "#" },
+  { title: "Youtube", href: "https://www.youtube.com/@shykathimu" },
+  { title: "Twitter", href: "https://x.com/EarShykat" },
+  { title: "Instagram", href: "https://www.instagram.com/rip_arceneaux/" },
+  { title: "LinkedIn", href: "https://www.linkedin.com/in/md-shykat/" },
+  { title: "Github", href: "https://github.com/pain-arch" },
 ];
 
 export const Footer = () => {
@@ -17,9 +18,20 @@ export const Footer = () => {
           <div className="">
             <nav className="flex flex-col md:flex-row items-center gap-8">
               {footerLinks.map(link => (
-                <a key={link.title} href={link.href} className='inline-flex items-center gap-1.5'>
+                <a
+                  key={link.title}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className='inline-flex items-center gap-1.5'
+                >
                   <span className="font-semibold">{link.title}</span>
-                  <ArrowupRightIcon className="size-4"/>
+                  {/* Fallback if SVG import fails */}
+                  {ArrowupRightIcon ? (
+                    <ArrowupRightIcon className="size-4" />
+                  ) : (
+                    <span className="icon-placeholder">↗</span> // Basic icon placeholder
+                  )}
                 </a>
               ))}
             </nav>
