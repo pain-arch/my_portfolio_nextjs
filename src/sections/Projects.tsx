@@ -13,9 +13,9 @@ import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Web Application",
+    year: "2024",
+    title: "Mock AI Interview Website",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
@@ -25,8 +25,8 @@ const portfolioProjects = [
     image: aimock,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
+    company: "Web Application",
+    year: "2023",
     title: "Light Saas Landing Page",
     results: [
       { title: "Boosted sales by 20%" },
@@ -37,9 +37,9 @@ const portfolioProjects = [
     image: next_blog,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Web Application",
+    year: "2021",
+    title: "Prochesta- Fund Raising Website",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
@@ -49,9 +49,9 @@ const portfolioProjects = [
     image: prochesta,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Web Application",
+    year: "2021",
+    title: "Fluent Language Learning Website",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
@@ -61,8 +61,8 @@ const portfolioProjects = [
     image: fluentLang,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
+    company: "Html, Css, Js website",
+    year: "2020",
     title: "AI Startup Landing Page",
     results: [
       { title: "Enhanced user experience by 40%" },
