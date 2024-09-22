@@ -63,7 +63,7 @@ const portfolioProjects = [
   {
     company: "Html, Css, Js website",
     year: "2020",
-    title: "AI Startup Landing Page",
+    title: "Buildx- Construction Company Website",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
