@@ -27,7 +27,7 @@ const portfolioProjects = [
   {
     company: "Web Application",
     year: "2023",
-    title: "Light Saas Landing Page",
+    title: "Next JS Blog Website",
     results: [
       { title: "Boosted sales by 20%" },
       { title: "Expanded customer reach by 35%" },
