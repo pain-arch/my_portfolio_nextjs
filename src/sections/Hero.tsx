@@ -93,8 +93,10 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
+          <button>
+            <a href="/projects">Click</a>
+          </button>
           <button 
-            onClick={() => smoothScrollTo('projects')}
             className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl transition-all duration-300 hover:bg-white/10 hover:scale-105 hover:shadow-lg hover:shadow-emerald-300/20 group"
           >
             <span className="font-semibold">Explore My Work</span>
@@ -105,7 +107,7 @@ export const HeroSection = () => {
             className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl transition-all duration-300 hover:bg-white/90 hover:scale-105 hover:shadow-lg hover:shadow-white/20"
           >
             <span>👋</span>
-            <span className="font-semibold">Lets Connect</span>
+            <span className="font-semibold">Lets Connect</span> 
           </button>
         </div>
       </div>

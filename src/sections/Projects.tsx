@@ -128,6 +128,17 @@ export const ProjectsSection = () => {
             </Card>
           ))}
         </div>
+        
+        {/* View All Projects Button */}
+        <div className="text-center mt-16">
+          <a
+            href="/projects"
+            className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl transition-all duration-300 font-semibold hover:scale-105 hover:shadow-lg hover:shadow-emerald-600/25"
+          >
+            <span>View All Projects</span>
+            <ArrowUpRightIcon className="size-5" />
+          </a>
+        </div>
       </div>
     </section>
   );
