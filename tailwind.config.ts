@@ -29,6 +29,8 @@ const config: Config = {
         'ping-large': 'ping-large 1s ease-in-out infinite',
         'move-left': 'move-left 1s linear infinite',
         'move-right': 'move-right 1s linear infinite',
+        'scroll-bounce': 'scroll-bounce 2s ease-in-out infinite',
+        'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
       },
       keyframes: {
         'ping-large': {
@@ -44,7 +46,28 @@ const config: Config = {
         'move-right': {
           "0%": { transform: "translateX(-50%)" },
           "100%": { transform: "translateX(0%)" },
-        }
+        },
+        'scroll-bounce': {
+          '0%, 20%, 50%, 80%, 100%': {
+            transform: 'translateY(0)',
+          },
+          '40%': {
+            transform: 'translateY(-6px)',
+          },
+          '60%': {
+            transform: 'translateY(-3px)',
+          },
+        },
+        'fade-in-up': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(30px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
       },
     },
   },

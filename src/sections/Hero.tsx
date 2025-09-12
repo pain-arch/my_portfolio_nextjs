@@ -1,3 +1,4 @@
+'use client';
 import memojiImage from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
@@ -5,9 +6,20 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
 
+const smoothScrollTo = (elementId: string) => {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    });
+  }
+};
+
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0">
+    <div id="hero" className="py-32 md:py-48 lg:py-60 relative z-0 scroll-mt-16">
       <div className="absolute inset-0 sm:hidden md:hidden lg:block [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-5"
@@ -81,11 +93,17 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+          <button 
+            onClick={() => smoothScrollTo('projects')}
+            className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl transition-all duration-300 hover:bg-white/10 hover:scale-105 hover:shadow-lg hover:shadow-emerald-300/20 group"
+          >
             <span className="font-semibold">Explore My Work</span>
-            <ArrowDown className="size-4" />
+            <ArrowDown className="size-4 transition-transform duration-300 group-hover:animate-scroll-bounce" />
           </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl">
+          <button 
+            onClick={() => smoothScrollTo('contact')}
+            className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl transition-all duration-300 hover:bg-white/90 hover:scale-105 hover:shadow-lg hover:shadow-white/20"
+          >
             <span>👋</span>
             <span className="font-semibold">Lets Connect</span>
           </button>
