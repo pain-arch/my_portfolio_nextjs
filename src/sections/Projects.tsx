@@ -1,87 +1,32 @@
-/* eslint-disable react/jsx-key */
-import aimock from "@/assets/images/ai-mock.png";
-import fluentLang from "@/assets/images/fluent-lang.png";
-import buildx from "@/assets/images/buildx.png";
-import prochesta from "@/assets/images/prochesta.png";
-import next_blog from "@/assets/images/next-blog.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-import grainImage from "@/assets/images/grain.jpg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
+import { allProjects } from "@/data/projects";
 
-const portfolioProjects = [
-  {
-    company: "Web Application",
-    year: "2024",
-    title: "Mock AI Interview Website",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://mock-ai-interview-website.vercel.app/",
-    image: aimock,
-  },
-  {
-    company: "Web Application",
-    year: "2023",
-    title: "Next JS Blog Website",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
-    ],
-    link: "https://next-blog-sepia-five.vercel.app/",
-    image: next_blog,
-  },
-  {
-    company: "Web Application",
-    year: "2021",
-    title: "Prochesta- Fund Raising Website",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://procheshta.netlify.app/",
-    image: prochesta,
-  },
-  {
-    company: "Web Application",
-    year: "2021",
-    title: "Fluent Language Learning Website",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://fluentlang010.netlify.app/",
-    image: fluentLang,
-  },
-  {
-    company: "Html, Css, Js website",
-    year: "2020",
-    title: "Buildx- Construction Company Website",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://pain-arch.github.io/builder-jquery/",
-    image: buildx,
-  },
+const featuredProjectIds = [
+  "arroyo-insurance",
+  "a-bit-rude",
+  "east-river-plaza",
+  "einfach-finanzieren",
+  "child-psychology-assessments",
+  "spark-studio",
+  "userlify",
 ];
+
+const portfolioProjects = allProjects.filter((project) =>
+  featuredProjectIds.includes(project.id)
+);
 
 export const ProjectsSection = () => {
   return (
     <section id="projects" className="pb-16 scroll-mt-16">
       <div className="container">
         <SectionHeader
-          eyebrow="Real-world Results"
+          eyebrow="Selected Client Work"
           title="Featured Projects"
-          description="See how I transformed concepts into engaging digital experiences."
+          description="Explore a selection of live websites built for businesses across insurance, retail, finance, e-commerce, and healthcare."
         />
         <div className="flex flex-col mt-10 md:mt-20 gap-20">
           {portfolioProjects.map((project, projectIndex) => (
@@ -110,18 +55,24 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
-                    <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                      <span>Visit Live Site</span>
-                      <ArrowUpRightIcon className="size-4" />
-                    </button>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8"
+                  >
+                    <span>Visit Live Site</span>
+                    <ArrowUpRightIcon className="size-4" />
                   </a>
                 </div>
-                <div className="relative">
+                <div className="relative mt-8 h-64 overflow-hidden rounded-t-2xl md:h-80 lg:mt-0 lg:h-auto lg:min-h-full lg:rounded-t-none">
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                    fill
+                    unoptimized={typeof project.image === "string" && project.image.endsWith(".svg")}
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover object-center"
                   />
                 </div>
               </div>

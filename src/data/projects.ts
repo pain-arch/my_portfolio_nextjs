@@ -6,6 +6,11 @@ import next_blog from "@/assets/images/next-blog.png";
 import darkSaas from "@/assets/images/dark-saas-landing-page.png";
 import lightSaas from "@/assets/images/light-saas-landing-page.png";
 import aiStartup from "@/assets/images/ai-startup-landing-page.png";
+import arroyoInsurance from "@/assets/images/arroyo-insurance.png";
+import aBitRude from "@/assets/images/a-bit-rude.png";
+import eastRiverPlaza from "@/assets/images/east-river-plaza.png";
+import einfachFinanzieren from "@/assets/images/einfach-finanzieren.png";
+import childPsychologyAssessments from "@/assets/images/child-psychology-assessments.png";
 
 export interface Project {
   id: string;
@@ -22,10 +27,192 @@ export interface Project {
   githubLink?: string;
   image: any;
   status: 'Completed' | 'In Progress' | 'Planned';
-  duration: string;
+  duration?: string;
 }
 
 export const allProjects: Project[] = [
+  {
+    id: "arroyo-insurance",
+    title: "Arroyo Insurance",
+    description: "Responsive insurance website for tailored business and personal coverage",
+    longDescription: "A conversion-focused insurance website that organizes commercial and personal coverage into clear service journeys, with dedicated quote requests, consultation calls to action, FAQs, team information, and location content.",
+    company: "Insurance Website",
+    year: "2025",
+    category: "Landing Page",
+    technologies: ["WordPress", "Elementor", "JavaScript", "jQuery", "Swiper", "Yoast SEO"],
+    features: [
+      "Business and personal insurance service journeys",
+      "Quote and consultation conversion paths",
+      "Coverage pages for auto, property, liability, cyber, and workers' compensation",
+      "Responsive navigation and service discovery",
+      "Insurance FAQ and guidance content",
+      "Team and location information"
+    ],
+    results: [
+      { title: "Business and personal insurance journeys" },
+      { title: "Quote and consultation conversion paths" },
+      { title: "Responsive service and FAQ experience" },
+    ],
+    link: "https://arroyoins.com/",
+    image: arroyoInsurance,
+    status: "Completed"
+  },
+  {
+    id: "a-bit-rude",
+    title: "A Bit Rude",
+    description: "Bold WooCommerce storefront for apparel, mugs, and novelty products",
+    longDescription: "A personality-led e-commerce experience with a vibrant storefront, featured products, new arrivals, product variants, customer accounts, cart functionality, newsletter capture, and supporting policy pages.",
+    company: "E-commerce Store",
+    year: "2026",
+    category: "Web Application",
+    technologies: ["WordPress", "WooCommerce", "Elementor", "JavaScript", "jQuery", "Swiper", "Yoast SEO"],
+    features: [
+      "WooCommerce product catalogue",
+      "Product variants and shopping cart",
+      "Customer account experience",
+      "Featured products and new arrivals",
+      "Newsletter signup integration",
+      "Cookie preferences and store policies"
+    ],
+    results: [
+      { title: "WooCommerce storefront and product catalogue" },
+      { title: "Variants, cart, and account workflows" },
+      { title: "Newsletter and consent integrations" },
+    ],
+    link: "https://abitrude.co/",
+    image: aBitRude,
+    status: "Completed"
+  },
+  {
+    id: "east-river-plaza",
+    title: "East River Plaza",
+    description: "Destination website for a major East Harlem shopping and community hub",
+    longDescription: "A content-rich property website that helps visitors explore East River Plaza's retailers, events, local art, community initiatives, news, parking, public transportation, and leasing information.",
+    company: "Retail Property Website",
+    year: "2024",
+    category: "Web Application",
+    technologies: ["WordPress", "Elementor", "JavaScript", "jQuery", "Swiper", "Responsive Design"],
+    features: [
+      "Retailer directory and property overview",
+      "Events, news, and community content",
+      "Local artist gallery",
+      "Parking and public transportation resources",
+      "Leasing information and contact paths",
+      "Responsive multimedia experience"
+    ],
+    results: [
+      { title: "Retailer directory and property overview" },
+      { title: "Events, local art, news, and community content" },
+      { title: "Parking, transit, and leasing resources" },
+    ],
+    link: "https://eastriverplaza.com/",
+    image: eastRiverPlaza,
+    status: "Completed"
+  },
+  {
+    id: "einfach-finanzieren",
+    title: "Einfach Finanzieren",
+    description: "Swiss mortgage platform with guidance, affordability tools, and lead capture",
+    longDescription: "A German-language mortgage website that guides customers from initial affordability questions to a tailored financing request, supported by a mortgage calculator, a four-step process, testimonials, and consultation forms.",
+    company: "Mortgage Platform",
+    year: "2025",
+    category: "Web Application",
+    technologies: ["WordPress", "Elementor", "JavaScript", "jQuery", "Swiper", "Yoast SEO"],
+    features: [
+      "Mortgage guidance and inquiry funnel",
+      "Property affordability calculator",
+      "Four-step financing journey",
+      "Tailored mortgage solution content",
+      "Customer testimonials",
+      "Consultation and contact forms"
+    ],
+    results: [
+      { title: "Mortgage guidance and inquiry funnel" },
+      { title: "Integrated property affordability calculator" },
+      { title: "Four-step financing journey with testimonials" },
+    ],
+    link: "https://einfachfinanzieren.ch/",
+    image: einfachFinanzieren,
+    status: "Completed"
+  },
+  {
+    id: "child-psychology-assessments",
+    title: "Child Psychology Assessments",
+    description: "Supportive psychology website for assessments, counselling, and family care",
+    longDescription: "A reassuring healthcare website that explains psychology, counselling, and assessment services for children, including ADHD, autism, learning, and cognitive assessments delivered across home, school, and clinic settings.",
+    company: "Healthcare Website",
+    year: "2026",
+    category: "Landing Page",
+    technologies: ["WordPress", "Elementor", "JavaScript", "jQuery", "Swiper", "Responsive Design"],
+    features: [
+      "Psychology, counselling, and assessment service pathways",
+      "ADHD and autism assessment information",
+      "Learning and cognitive assessment guidance",
+      "Home, school, and clinic service options",
+      "Frequently asked questions",
+      "Session and assessment booking calls to action"
+    ],
+    results: [
+      { title: "Psychology, counselling, and assessment services" },
+      { title: "ADHD, autism, learning, and cognitive pathways" },
+      { title: "Booking flow for home, school, and clinic support" },
+    ],
+    link: "https://childpsychologyassessments.com.au/",
+    image: childPsychologyAssessments,
+    status: "Completed"
+  },
+  {
+    id: "spark-studio",
+    title: "Spark Studio",
+    description: "Website development studio helping businesses launch responsive digital experiences",
+    longDescription: "A conversion-focused studio website that guides customers from an initial idea to launch through a clear three-step journey, supported by service features, plan comparisons, testimonials, account access, and strong calls to action.",
+    company: "Web Development Studio",
+    year: "2026",
+    category: "Landing Page",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Clerk", "Vercel", "Responsive Design"],
+    features: [
+      "Three-step signup, customization, and launch journey",
+      "Website plan and pricing comparison",
+      "Customizable template offering",
+      "SEO and responsive design positioning",
+      "E-commerce and secure hosting support",
+      "Clerk-powered account authentication"
+    ],
+    results: [
+      { title: "Three-step signup, customize, and launch journey" },
+      { title: "Plan comparison and conversion-focused pricing" },
+      { title: "SEO, e-commerce, and secure hosting feature set" },
+    ],
+    link: "https://spark-studio-ltd.vercel.app/",
+    image: "/project-images/spark-studio.svg",
+    status: "Completed"
+  },
+  {
+    id: "userlify",
+    title: "Userlify",
+    description: "Startup-focused design agency turning product ideas into polished digital experiences",
+    longDescription: "A portfolio-led design agency website presenting UI/UX design, web development, product strategy, and brand identity services through project showcases, mobile and web design examples, founder-focused positioning, and client testimonials.",
+    company: "Product Design Agency",
+    year: "2026",
+    category: "Landing Page",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Vercel", "Responsive Design"],
+    features: [
+      "UI/UX and product design service presentation",
+      "Web development and product strategy offerings",
+      "Brand identity capabilities",
+      "Responsive project showcase",
+      "Startup-focused value proposition",
+      "Client testimonials and consultation calls to action"
+    ],
+    results: [
+      { title: "Startup-focused design and development services" },
+      { title: "Portfolio-led product and device showcase" },
+      { title: "Founder testimonials and consultation flow" },
+    ],
+    link: "https://userlify.vercel.app/",
+    image: "/project-images/userlify.png",
+    status: "Completed"
+  },
   {
     id: "ai-mock-interview",
     title: "Mock AI Interview Website",
@@ -188,7 +375,7 @@ export const allProjects: Project[] = [
     ],
     link: "#",
     image: darkSaas,
-    status: "Completed",
+    status: "In Progress",
     duration: "1 month"
   },
   {
@@ -215,7 +402,7 @@ export const allProjects: Project[] = [
     ],
     link: "#",
     image: lightSaas,
-    status: "Completed", 
+    status: "In Progress", 
     duration: "1 month"
   },
   {
@@ -258,6 +445,8 @@ export const projectCategories = [
 
 export const projectYears = [
   "All",
+  "2026",
+  "2025",
   "2024",
   "2023", 
   "2022",
@@ -266,6 +455,10 @@ export const projectYears = [
 ] as const;
 
 export const allTechnologies = [
+  "WordPress",
+  "Elementor",
+  "WooCommerce",
+  "Clerk",
   "Next.js",
   "React", 
   "TypeScript",
@@ -280,6 +473,9 @@ export const allTechnologies = [
   "MySQL",
   "Bootstrap",
   "jQuery",
+  "Swiper",
+  "Yoast SEO",
   "Vercel",
-  "OpenAI API"
+  "OpenAI API",
+  "Responsive Design"
 ] as const;

@@ -37,6 +37,7 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
           src={project.image}
           alt={project.title}
           fill
+          unoptimized={typeof project.image === 'string' && project.image.endsWith('.svg')}
           className="object-cover group-hover:scale-110 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent" />
@@ -108,11 +109,13 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
         </div>
 
         {/* Duration */}
-        <div className="mb-4">
-          <span className="text-white/50 text-xs">
-            Duration: <span className="text-white/70 font-medium">{project.duration}</span>
-          </span>
-        </div>
+        {project.duration && (
+          <div className="mb-4">
+            <span className="text-white/50 text-xs">
+              Duration: <span className="text-white/70 font-medium">{project.duration}</span>
+            </span>
+          </div>
+        )}
 
         {/* Action Buttons */}
         <div className="flex gap-3">
